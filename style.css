@@ -1,0 +1,678 @@
+@font-face {
+    font-family: Chaney;
+    src: url(/Fonts/chaney-ultraextended-webfont.ttf);
+  }
+  @font-face {
+    font-family: DinPro;
+    src: url(/Fonts/DINPro-CondensedBold.ttf);
+  }
+  
+  @font-face {
+    font-family: Capital;
+    src: url(/Fonts/CapitoliumNews2-Regular.ttf);
+  }
+  
+  @font-face {
+    font-family: Bellefair;
+    src: url(/Fonts/Bellefair-Regular.ttf);
+  }
+  
+  @font-face {
+    font-family: hotel2;
+    src: url(/Fonts/MontecatiniPro-NormaleLight.ttf);
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100vh;
+    
+}
+.loader{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(250,195,8);
+    animation:pulse 3s ;
+
+}
+
+.zoom{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%) rotate(-7deg);
+    font-size: 13vw;
+    font-family: chaney;
+    -webkit-text-stroke-width:0.09vh;
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke-color: #fff;
+    outline: none;
+    font-weight: 200;
+    
+}
+
+.loader h1{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-7deg);
+    font-size:5vw;
+    font-family: chaney;
+    color: #fff;
+
+}
+
+.Loading{
+    position: relative;
+    left: 50%;
+    width: 50%;
+    bottom: -65%;
+    height: 10px;
+    transform: translate(-50%, -50%) rotate(-7deg);
+    background-color: #fff;
+    border-radius:4px;
+    overflow:hidden;
+}
+
+.Loading::after{
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    height: 100%;
+    border-radius: 4px;
+    animation:load 3s ;
+}
+
+@keyframes load{
+    0%{
+        width: 0%;
+        background-color: #a28089;
+    }
+    25%{
+        width: 25%;
+        background-color: #a02ded;
+    }
+    50%{
+        width: 50%;
+        background-color: #d0bdf4;
+    }
+    75%{
+        width: 75%;
+        background-color: #6e5656;
+    }
+    100%{
+        width: 100%;
+        background-color: rgb(250,195,8);
+    }
+}
+
+@keyframes pulse{
+    0%{
+    
+        background-color: #a28089;
+    }
+    25%{
+    
+        background-color: #a02ded;
+    }
+    50%{
+       
+        background-color: #5490df;
+    }
+    75%{
+       
+        background-color: #e27a03;
+    }
+    100%{
+       
+        background-color: rgb(250,195,8);
+    }
+}
+/* <----> */
+
+.svgname{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/Images/back1.jpg);
+    background-size: cover;
+    background-position: bottom;
+    opacity: 0;
+    overflow: hidden;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.5s;
+    z-index: 99;
+}
+
+#dotted{
+    width: 130%;
+    height: 130vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/Images/back.png);
+    background-size: cover;
+    background-position: center;
+    animation: dotte 8s ease-in-out alternate infinite; 
+    overflow: hidden;
+}
+#dotted > img:nth-child(1) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12vw;
+    animation: updown 2s ease-in-out alternate infinite;
+    opacity: 0;
+  }
+  
+  #hotkik-h {
+    position: absolute;
+    width: 9vw;
+    top: 25%;
+    left: 39%;
+    animation: letter 1.9s ease-in-out alternate infinite;
+  }
+  #hotkik-k2 {
+    position: absolute;
+    width: 5vw;
+    top: 43%;
+    left: 42%;
+    animation: letter 1.9s ease-in-out alternate infinite;
+  }
+  #hotkik-o {
+    position: absolute;
+    width: 7vw;
+    top: 25%;
+    left: 54%;
+    z-index: 2;
+    animation: letter 1.8s ease-in-out alternate infinite;
+  }
+  #hotkik-t {
+    position: absolute;
+    width: 10vw;
+    top: 38%;
+    left: 54%;
+    animation: letter 1.9s ease-in-out alternate infinite;
+  }
+  #hotkik-k {
+    position: absolute;
+    width: 7vw;
+    top: 50%;
+    left: 53%;
+    animation: letter 1.8s ease-in-out alternate infinite;
+  }
+  #hotkik-i {
+    position: absolute;
+    width: 15vw;
+    top: 44%;
+    left: 38%;
+    z-index: 9;
+    animation: letter 1.9s ease-in-out alternate infinite;
+  }
+  
+  
+  #explore {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 75.6%;
+    width: 7vw;
+    height: 2vw;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.45);
+    box-shadow: 0 8px 32px 0 rgba(229, 116, 45, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    font-size: 0.5vw;
+    cursor: pointer;
+    font-family: product sans;
+  }
+  
+  #explore a h1 {
+    color: #fff;
+  }
+  
+  @keyframes updown {
+    from {
+      margin-top: -1vw;
+    }
+  
+    to {
+      margin-top: 1vw;
+    }
+  }
+  
+  @keyframes letter {
+    from {
+      margin-top: 0vw;
+    }
+  
+    to {
+      margin-top: 1vw;
+    }
+  }
+  
+  @keyframes dotte {
+    from {
+      margin-top: -15%;
+      margin-left: -15%;
+    }
+  }
+
+  /* /.../ */
+
+  #main-again {
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  #nav {
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    width: 100%;
+    height: 10vh;
+  }
+  
+  .nav-part {
+    display: flex;
+    width: calc(100% / 4);
+    height: 100%;
+   
+  }
+  
+  #cntr-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 2);
+    height: 100%;
+  }
+  
+  #lft-nav {
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #rght-nav {
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .logo {
+    width: 6vw;
+    height: 6vh;
+    left: 1.5vw;
+    top: 3vh;
+    background-image: url(/Images/hotkik-logo.png);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #lft-nav .ri-close-fill {
+    display: none;
+  }
+  
+  #lft-nav .ri-menu-line {
+    display: none;
+  }
+  
+  .ri-close-fill {
+    position: absolute;
+    color: #fff;
+    display: none;
+    z-index: 9999 !important;
+  }
+  
+  #rght-nav a {
+    font-family: "Bellefair";
+    color: #666666;
+  }
+  #rght-nav button {
+    font-family: "Bellefair";
+    border-radius: 0.5vw;
+    padding: 0.7vw;
+    background-color: transparent;
+    border: 2px solid rgba(49, 49, 49, 0.479);
+    backdrop-filter: blur(7px);
+  }
+  #rght-nav button:hover {
+    background-color: #fff;
+  }
+  
+  #rght-nav a:hover {
+    border-bottom: 2px solid black;
+    color: #000000;
+  }
+  
+  .search {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30%;
+    height: 50%;
+    background-color: #fff;
+    border: 1px solid #333;
+    border-spacing: 5px;
+    z-index: 99999;
+  }
+  
+  .search-box {
+    z-index: 8;
+    width: 15vw;
+    height: 1.5vw;
+    border-bottom: 1px solid #2d2d2d55;
+  }
+  
+  
+  .divider {
+    width: 1px;
+    height: 50%;
+    background-color: #333;
+  }
+  
+  i {
+    color: #333;
+  }
+  .ri-shopping-bag-line {
+    color: rgb(180, 180, 180);
+  }
+  
+  .main-home {
+    height: 100vh;
+    width: 100%;
+     display: flex;
+     overflow: hidden;
+  }
+  
+  .main-home .diver {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .main-home > .diver > .img-div {
+    position: absolute;
+    width: 70vw;
+    height: 100vh;
+    right: 0;
+  }
+  
+  .img-one {
+    width: 100%;
+    height: 80%;
+    background-image: url(/Images/resto-1.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .main-home .diver .main-txt-front {
+    position: absolute;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    padding-left: 16.3vw;
+    top: 65%;
+    transform: translate(0%, -50%);
+    width: 38vw;
+    height: 50vh;
+    z-index: 2;
+  }
+  
+  .main-home .diver .main-txt-front h1 {
+    font-size: 7vw;
+    font-family: hotel2;
+    letter-spacing: 0.8vw;
+    color: #333333;
+  }
+  
+  .main-home .diver .main-txt-front h1 span {
+    font-family: hotel2;
+    margin-right: 4vw;
+    
+  }
+  
+  .main-txt-front p {
+    font-size: 1.3vw;
+    font-family: Bellefair;
+  }
+  
+  .mandit {
+    position: absolute;
+    margin-top: 5vw;
+    margin-left: 5vw;
+    width: 12vw;
+    height: 30vh;
+    border-radius: 50% 50% 0% 0%;
+    background-image: url(/Images/stay-resto.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 1vw solid #fff0e4;
+    z-index: 2;
+  }
+  
+  .mandit-2 {
+    position: absolute;
+    margin-top: 62vh;
+    margin-left: 50vh;
+    width: 20vw;
+    height: 30vh;
+    background-image: url(/Images/table-resto.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: 99;
+    border: 1vw solid #fff0e4;
+  }
+  
+  .front-page-img {
+    /* position: relative; */
+    width: 7vw;
+    height: 100vh;
+    background-color: #fff0e4;
+  }
+  
+  #circle {
+    position: absolute;
+    top: 31vh;
+    left: -3.7vw;
+    position: relative;
+    width: 52vw;
+    z-index: 99;
+    background-color: #ff7f7f;
+  }
+  
+  #circle text {
+    font-family: "Helvetica Neue", Arial;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  #circle svg {
+    position: absolute;
+    left: 0;
+    top: 5vh;
+    width: 100%;
+    height: 11vw;
+  
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0);
+    }
+  }
+  
+  .line-effect {
+    position: absolute;
+    top: 0%;
+    left: 23%;
+    width: 30%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    gap: 0.2vw;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .line-effect .line {
+    width: 0.2vw;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.476);
+  }
+  
+  #line-effect-2 {
+    left: 23%;
+    height: 10vh;
+    top: 90vh;
+    z-index: 999;
+  }
+  
+  #line-effect-3 {
+    left: 3.4%;
+    height: 100vh;
+    top: 0vh;
+    z-index: 1;
+  }
+  
+  #line-effect-3 .line {
+    background-color: rgb(255, 240, 228);
+  }
+  
+  .upper-menu {
+    display: flex;
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.888);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 9999999999999999999999;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  }
+  
+  .left-upper-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vw;
+    width: 50%;
+    height: 100vh;
+    /* background-color: #ff6969; */
+  }
+  .left-upper-menu h1 {
+    font-family: hotel2;
+    font-size: 3vw;
+    letter-spacing: 0.1vw;
+    color: #fff;
+  }
+  .right-upper-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100vh;
+    /* background-color: red; */
+  }
+  
+  #all-image-upper {
+    overflow: hidden;
+    width: 20vw;
+    height: 50vh;
+  }
+  
+  #slider-upper {
+    width: 100%;
+    height: 400%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+  }
+  
+  .menu-img-one {
+    width: 100%;
+    height: 25%;
+    background-image: url(https://images.unsplash.com/photo-1676030788205-7b11922275eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80);
+    background-position: center;
+    background-size: cover;
+  }
+  .menu-img-two {
+    width: 100%;
+    height: 25%;
+    background-image: url(https://images.unsplash.com/photo-1676030788383-9c18ddc4a1dd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80);
+    background-position: center;
+    background-size: cover;
+  }
+  .menu-img-three {
+    width: 100%;
+    height: 25%;
+    background-image: url(https://images.unsplash.com/photo-1676204831292-9fa03a1d6a57?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80);
+    background-position: center;
+    background-size: cover;
+  }
+  .menu-img-four {
+    width: 100%;
+    height: 25%;
+    background-image: url(https://images.unsplash.com/photo-1674108015054-7e490a348286?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80);
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .ri-close-fill {
+    position: absolute;
+    color: #fff;
+    display: none;
+    z-index: 9999999999999999999 !important;
+  }
+  
+  .upper-menu .ri-close-fill {
+    top: 4%;
+    left: 36.5%;
+  }
