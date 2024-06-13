@@ -16,6 +16,10 @@
     font-family: Bellefair;
     src: url(/Fonts/Bellefair-Regular.ttf);
   }
+  @font-face {
+    font-family: hotel;
+    src: url(/Fonts/MontecatiniPro-StrettoSemiBold.ttf);
+  }
   
   @font-face {
     font-family: hotel2;
@@ -504,7 +508,6 @@ html, body{
   }
   
   .front-page-img {
-    /* position: relative; */
     width: 7vw;
     height: 100vh;
     background-color: #fff0e4;
@@ -607,7 +610,6 @@ html, body{
     gap: 2vw;
     width: 50%;
     height: 100vh;
-    /* background-color: #ff6969; */
   }
   .left-upper-menu h1 {
     font-family: hotel2;
@@ -621,7 +623,6 @@ html, body{
     justify-content: center;
     width: 50%;
     height: 100vh;
-    /* background-color: red; */
   }
   
   #all-image-upper {
@@ -675,4 +676,183 @@ html, body{
   .upper-menu .ri-close-fill {
     top: 4%;
     left: 36.5%;
+  }
+/* //final animation scroll----------- */
+  #main2 {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  #home1 {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  canvas {
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+  
+  .txt-home1 {
+    position: absolute;
+    top: 290.5%;
+    right: 0;
+    padding-left: 5vw;
+    width: 50%;
+    height: 100%;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.472);
+    backdrop-filter: blur(4px);
+  }
+  
+  .h-container {
+    overflow: hidden;
+    width: 100%;
+    height: 10vw;
+    font-weight: 500;
+  }
+  .h-container:nth-child(1) {
+    margin-top: 15vw;
+    margin-left: -21vw;
+    width: 75%;
+  }
+  .h-container:nth-child(2) {
+    margin-left: -2vw;
+    width: 65%;
+  }
+  .h-container:nth-child(3) {
+    margin-top: -10vw;
+    margin-left: -20.5vw;
+    width: 55%;
+  }
+  .txt-home1 h1 {
+    font-size: 4vw;
+  }
+  
+  #h-one {
+    font-size: 8vw;
+    font-family: "hotel";
+  }
+  #h-two {
+    font-size: 2vw;
+    font-family: "hotel";
+  }
+  #h-three {
+    font-size: 1.1vw;
+    letter-spacing: 0.1vw;
+    font-family: Bellefair;
+    font-weight: 100;
+  }
+  
+
+
+  /* //////////// */
+  #page1 {
+    width: 100%;
+    height: 105vh;
+  }
+  
+  #one {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    color: #080808;
+    scroll-behavior: smooth;
+  }
+  
+  
+  .timeline {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .lft-timeline {
+    padding-left: 5vw;
+    width: 50%;
+    height: 100vh;
+  }
+  .lft-timeline > .white-div {
+    padding: 11vw;
+    margin-top: 10vh;
+    width: 90%;
+    height: 60vh;
+    background-color: #ffeadc;
+  }
+  .lft-timeline > .white-div > h4 {
+    font-size: 1.2vw;
+    font-family: Bellefair;
+    font-weight: 500;
+  }
+  
+  .rght-timeline {
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    background-color: #ffeaea;
+  }
+  
+  .lft-timeline h1 {
+    font-size: 5vw;
+    font-family: hotel2;
+    letter-spacing: 0.3vw;
+    font-weight: 500;
+  }
+  .lft-timeline h1 > span {
+    margin-left: 4vw;
+    font-size: 5vw;
+    font-family: hotel2;
+    letter-spacing: 0.3vw;
+    font-weight: 500;
+  }
+  
+  .rght-timeline > #back-div-img {
+    position: absolute;
+    right: 0;
+    top: 5vh;
+    width: 80%;
+    height: 90vh;
+    background-image: url(https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2580&q=80);
+    background-position: center;
+    background-size: cover;
+  }
+  .rght-timeline > #back-div-img > #rght-timeline-img {
+    top: 20%;
+    left: -40%;
+    position: absolute;
+    width: 70%;
+    height: 70vh;
+    background-image: url(https://images.unsplash.com/photo-1494859802809-d069c3b71a8a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80);
+    background-size: cover;
+    background-position: right;
+  }
+  .rght-timeline > #back-div-img > .gallery-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 5%;
+    left: 10%;
+    position: absolute;
+    width: 20vw;
+    height: 10vw;
+    background-color: #7b848b;
+  }
+  .rght-timeline > #back-div-img > .gallery-div > .outline1 {
+    position: absolute;
+    width: 80%;
+    height: 90%;
+    outline: 1px solid #fff;
+  }
+  .rght-timeline > #back-div-img > .gallery-div > .outline2 {
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    outline: 3px solid #fff;
+  }
+  .rght-timeline > #back-div-img > .gallery-div > h1 {
+    font-family: hotel;
+    letter-spacing: 0.01vw;
+    color: #fff;
   }
