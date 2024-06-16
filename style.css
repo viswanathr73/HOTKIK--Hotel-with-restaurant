@@ -151,7 +151,7 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(/Images/back1.jpg);
+    background-image: url(Images/back1.jpg);
     background-size: cover;
     background-position: bottom;
     opacity: 0;
@@ -166,7 +166,7 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(/Images/back.png);
+    background-image: url(Images/back.png);
     background-size: cover;
     background-position: center;
     animation: dotte 8s ease-in-out alternate infinite; 
@@ -327,7 +327,7 @@ html, body{
     height: 6vh;
     left: 1.5vw;
     top: 3vh;
-    background-image: url(/Images/hotkik-logo.png);
+    background-image: url(Images/hotkik-logo.png);
     background-size: cover;
     background-position: center;
   }
@@ -424,7 +424,7 @@ html, body{
   .img-one {
     width: 100%;
     height: 80%;
-    background-image: url(/Images/resto-1.jpg);
+    background-image: url(Images/resto-1.jpg);
     background-size: cover;
     background-position: center;
   }
@@ -487,7 +487,7 @@ html, body{
     width: 12vw;
     height: 30vh;
     border-radius: 50% 50% 0% 0%;
-    background-image: url(/Images/stay-resto.jpg);
+    background-image: url(Images/stay-resto.jpg);
     background-size: cover;
     background-position: center;
     border: 1vw solid #fff0e4;
@@ -500,7 +500,7 @@ html, body{
     margin-left: 50vh;
     width: 20vw;
     height: 30vh;
-    background-image: url(/Images/table-resto.jpg);
+    background-image: url(Images/table-resto.jpg);
     background-position: center;
     background-size: cover;
     z-index: 99;
